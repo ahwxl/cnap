@@ -1,4 +1,4 @@
-package com.shfft.cnap.test;
+package com.bplow.cnap.test;
 
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

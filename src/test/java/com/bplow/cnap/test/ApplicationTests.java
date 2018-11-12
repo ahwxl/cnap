@@ -1,4 +1,4 @@
-package com.shfft.cnap.test;
+package com.bplow.cnap.test;
 
 import com.bplow.cnap.model.domain.City;
 import com.bplow.cnap.service.CityService;
