@@ -265,6 +265,32 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- <dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcprov-jdk16</artifactId>
+		    <version>1.46</version>
+		</dependency> -->
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcpkix-jdk15on</artifactId>
+		    <version>1.57</version>
+		</dependency>
+		<!-- BC依赖包 -->
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcmail-jdk15on</artifactId>
+		    <version>1.56</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<!-- <version>4.5.3</version> -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<!-- <version>4.4.9</version> -->
+		</dependency>
     </dependencies>
 
     <profiles>
@@ -433,6 +459,9 @@
                     <target>${java.version}</target>
                     <compilerArgument>-parameters</compilerArgument>
                     <useIncrementalCompilation>false</useIncrementalCompilation>
+                    <compilerArguments>  
+			            <bootclasspath>${JAVA_HOME}/jre/lib/rt.jar</bootclasspath>  
+			        </compilerArguments>
                 </configuration>
             </plugin>
             <plugin>
